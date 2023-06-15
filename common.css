@@ -1,8 +1,9 @@
-body {
+:root {
     --idvgreen: #79E9CE;
     --idvpurple: #9C8CCA;
     --idvpink: #EBB2D3;
     --idvblue: #9ECFED;
+    --scrollPos: 0;
     overflow-x: hidden;
 }
 
@@ -12,7 +13,6 @@ body {
     left: 0vw;
     width: 100%;
     height: 5vw;
-    background: var(--idvgreen);
     z-index: 1000;
 }
 
@@ -28,6 +28,58 @@ body {
     grid-template-columns: repeat(8, 10vw);
     grid-template-rows: repeat(auto-fill, 10vw);
     grid-row-gap: 2.5vw;
+}
+
+#leftNavs{
+    position: relative;
+    left: 1.25vw;
+    top: 0vw;
+    width: 70vw;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    align-content: center;
+    justify-content: left;
+}
+
+.navButton{
+    position: relative;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    height: 3vw;
+    width: fit-content;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    border-radius: 3vw;
+    background: var(--idvpurple);
+    display: grid;
+    align-content: center;
+    margin-right: 0.5vw;
+    text-decoration: none;
+    font-size: max(1.25vw, 16px);
+}
+
+.navButton:hover{
+    background: white;
+    color: var(--idvpurple);
+}
+
+.navButton:hover::before{
+    --gradWidth: 4px;
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--gradWidth)/2);
+    top: calc(-1 * var(--gradWidth)/2);
+    width: calc(100% + var(--gradWidth));
+    height: calc(100% + var(--gradWidth));
+    border-radius: 5vw;
+    background: linear-gradient(180deg, var(--idvpurple) 0%, var(--idvpink) 100%);
+    z-index: -1;
+}
+
+#homeButton{
+    visibility: hidden;
 }
 
 .testObject{
