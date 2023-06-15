@@ -1,0 +1,37 @@
+body {
+    --idvgreen: #79E9CE;
+    --idvpurple: #9C8CCA;
+    --idvpink: #EBB2D3;
+    --idvblue: #9ECFED;
+    overflow-x: hidden;
+}
+
+#navbar{
+    position: fixed;
+    top: 0vw;
+    left: 0vw;
+    width: 100%;
+    height: 5vw;
+    background: var(--idvgreen);
+    z-index: 1000;
+}
+
+#layoutGrid{
+    position: relative;
+    left: 0vw;
+    top: 6vw;
+    width: 100%;
+    height: 95vw;
+    display: grid;
+    grid-auto-flow: row dense;
+    justify-content: space-around;
+    grid-template-columns: repeat(8, 10vw);
+    grid-template-rows: repeat(auto-fill, 10vw);
+    grid-row-gap: 2.5vw;
+}
+
+.testObject{
+    background: var(--idvpink);
+    width: 100%;
+    height: 100%;
+}
