@@ -1,4 +1,4 @@
-(async function () {
+genChart3 = (function () {
     // Generate data for the chart
     Math.seedrandom('voor');
     var temp1 = [];
@@ -47,7 +47,8 @@
                 ]
             },
             options: {
-                responsive: false,
+                responsive: true,
+                maintainAspectRatio: false,
                 interaction: {
                     mode: 'index'
                 },
@@ -97,4 +98,4 @@
             }
         }
     );
-})();
+});

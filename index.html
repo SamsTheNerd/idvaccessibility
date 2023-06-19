@@ -6,10 +6,11 @@
     <!-- see here https://www.cdnfonts.com/helvetica-neue-9.font for font usage. -->
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
-    <script src=//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js>
-    </script>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js"></script>
+    
+    <script src="graphThree.js"></script>
+    <script src="graphFour.js"></script>
     <script src="main.js"></script>
 </head>
 
@@ -37,9 +38,11 @@
         <div class="testObject"></div>
         <div class="testObject"></div>
         <div class="testObject"></div>
-        <canvas id="graphThree"></canvas>
-        <canvas id="graphFour"></canvas>
+        <div id="graphThreeContainer" class="graphContainer">
+            <canvas id="graphThree"></canvas>
+        </div>
+        <div id="graphFourContainer" class="graphContainer">
+            <canvas id="graphFour"></canvas>
+        </div>
     </div>
-    <script src="graphThree.js"></script>
-    <script src="graphFour.js"></script>
 </body>

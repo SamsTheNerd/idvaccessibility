@@ -1,4 +1,4 @@
-(async function () {
+genChart4 = () => {
     // Generate data for the chart
     Math.seedrandom('voomm');
     var temp1 = [];
@@ -47,7 +47,7 @@
                 ]
             },
             options: {
-                responsive: false,
+                responsive: true,
                 interaction: {
                     mode: 'index'
                 },
@@ -89,4 +89,4 @@
             }
         }
     );
-})();
+};

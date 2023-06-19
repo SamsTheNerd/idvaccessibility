@@ -1,8 +1,7 @@
 
-
-
 var onloadHandler = () => {
-
+    genChart3();
+    genChart4();
 }
 
 var scrollListener = () => {
