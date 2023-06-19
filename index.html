@@ -1,12 +1,18 @@
 <!DOCTYPE html>
+
 <head>
     <title> RPI Accessibility </title>
     <link rel="stylesheet" type="text/css" href="common.css">
     <!-- see here https://www.cdnfonts.com/helvetica-neue-9.font for font usage. -->
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    <script src=//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js>
+    </script>
+
     <script src="main.js"></script>
 </head>
+
 <body>
     <nav id="navbar">
         <div id="leftNavs">
@@ -15,7 +21,7 @@
             <a href="#" class="circleNav" id="homeButton">Home</a>
         </div>
         <div id="rightNavs">
-            
+
         </div>
     </nav>
     <div id="layoutGrid">
@@ -28,5 +34,9 @@
         <div class="testObject"></div>
         <div class="testObject"></div>
         <div class="testObject"></div>
+        <canvas id="graphThree"></canvas>
+        <canvas id="graphFour"></canvas>
     </div>
+    <script src="graphThree.js"></script>
+    <script src="graphFour.js"></script>
 </body>
