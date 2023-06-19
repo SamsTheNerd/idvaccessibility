@@ -4,6 +4,9 @@
     --idvpink: #EBB2D3;
     --idvblue: #9ECFED;
     --scrollPos: 0;
+    --navShiftPoint: 500;
+    --navProg: clamp(0,calc((var(--scrollPos) - var(--navShiftPoint)) / 100),1);
+    --navProgInv: calc(1 - var(--navProg));
     overflow-x: hidden;
 }
 
@@ -52,20 +55,45 @@
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     border-radius: 3vw;
-    background: var(--idvpurple);
+    background-color: var(--idvpurple);
     display: grid;
     align-content: center;
-    margin-right: 0.5vw;
+    margin-right: calc(
+        0.5vw * var(--navProgInv) - 15vw * var(--navProg));
     text-decoration: none;
     font-size: max(1.25vw, 16px);
+    opacity: calc(1 - var(--navProg));
 }
 
-.navButton:hover{
-    background: white;
+.circleNav{
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+    background-color: var(--idvpurple);
+    /* opacity: var(--navProg); */
+    border-radius: 3vw;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+svg.circleNavIcon{
+    fill: white;
+    width: 1.5vw;
+    height: auto;
+}
+
+.circleNav:hover svg.circleNavIcon{
+    fill: var(--idvpurple);
+}
+
+.purplePinkHoverStroke:hover{
+    background-color: white !important;
     color: var(--idvpurple);
 }
 
-.navButton:hover::before{
+.purplePinkHoverStroke:hover::before{
     --gradWidth: 4px;
     content: "";
     position: absolute;
@@ -75,11 +103,7 @@
     height: calc(100% + var(--gradWidth));
     border-radius: 5vw;
     background: linear-gradient(180deg, var(--idvpurple) 0%, var(--idvpink) 100%);
-    z-index: -1;
-}
-
-#homeButton{
-    visibility: hidden;
+    z-index: -10;
 }
 
 .testObject{
