@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js"></script>
-    
+    <script src="common.js"></script>
     <script src="graphThree.js"></script>
     <script src="graphFour.js"></script>
     <script src="main.js"></script>
@@ -29,15 +29,29 @@
         </div>
     </nav>
     <div id="layoutGrid">
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
-        <div class="testObject"></div>
+        <!-- start home screen section -->
+        <h1 id="homeTitle">
+            Will <span id="homeBigYOU" class="purpleEmphasis">YOU</span> Improve Accessibility at RPI?
+        </h1>
+        <img id="homeBannerImg" src="bannergraphic.svg">
+        <h4 id="scrollPrompt">scroll to learn more</h4>
+        <!-- start student needs section -->
+        <div id="studentNeeds"></div>
+        <h2 id="studentNeedsHeader"> RPI's Campus Is Not Accessible</h2>
+        <div id="studentNeedsText">
+            <p>
+                Many main routes and entryways have stairs, uneven ground, or heavy doors making them inaccessible.
+            </p>
+            <p>
+                Some buildings don't have elevators and some of the older ones that do are physically difficult to use. These can make large sections of campus completely inaccessible.
+            </p>
+            <p>
+                Additionally, there is a lack of gender neutral bathrooms on campus, especially accessible ones, with many buildings having none and most being single occupancy and hard to find.
+            </p>
+
+        </div>
+
+        <!-- start admin section -->
         <div id="graphThreeContainer" class="graphContainer">
             <canvas id="graphThree"></canvas>
         </div>
