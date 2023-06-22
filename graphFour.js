@@ -55,15 +55,14 @@ genChart4 = () => {
                     tooltip: {
                         callbacks: {
                             label: function (context) {
-                                let label = context.dataset.label || '';
-                                label += ': ';
+                                let label = "  ";
 
                                 if (label === 'Trans Enrollment: ') {
                                     label += Math.floor(context.parsed.y * 8000);
                                 } else {
                                     label += Math.floor(context.parsed.y * 2000);
                                 }
-                                return label;
+                                return label + " students";
                             }
 
                         }
