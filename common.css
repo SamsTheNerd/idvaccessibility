@@ -13,6 +13,10 @@
     overflow-x: hidden;
     color: var(--idvdarkpurple);
     font-family: Helvetica, sans-serif;
+
+    /* just some defaults so classes don't get mad */
+    --this-border-radius: 0vw;
+    --accent-color: var(--idvpink);
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -37,7 +41,7 @@
     left: 0vw;
     top: 6vw;
     width: 100%;
-    height: 95vw;
+    height: 200vw;
     display: grid;
     grid-auto-flow: row;
     justify-content: space-around;
@@ -66,6 +70,11 @@ h1{
 
 h2{
     font-size: 3vw;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 2.5vw;
     font-weight: bold;
 }
 
@@ -149,9 +158,37 @@ p{
     /* align-content: space-between; */
 }
 
+#accessibleRoutesTitle{
+    grid-row: 7 / 8;
+    grid-column: 3 / 7;
+    display: grid;
+    align-items: end;
+    height: 100%;
+    text-align: center;
+    border-bottom: solid 6px var(--idvpurple);
+    margin-top: 0;
+}
+
+#graphOneContainer{
+    grid-row: 8 / 11;
+    grid-column: 2 / 6;
+}
+
+#graphOneInfoBox{
+    grid-row: 8 / 11;
+    grid-column: 6 / 9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    --this-border-radius: 2vw;
+    --accent-color: var(--idvgreen);
+    border-radius: 2vw;
+}
+
 #graphThreeContainer {
-    grid-row-start: 10; 
-    grid-row-end: 14; 
+    grid-row-start: 20; 
+    grid-row-end: 24; 
     grid-column-start: 2;
     grid-column-end: 8;
     width: 100%;
@@ -159,8 +196,8 @@ p{
 }
 
 #graphFourContainer {
-    grid-row-start: 14; 
-    grid-row-end: 18; 
+    grid-row-start: 24; 
+    grid-row-end: 28; 
     grid-column-start: 2;
     grid-column-end: 8;
     width: 100%;
@@ -222,5 +259,18 @@ svg.circleNavIcon{
     height: calc(100% + var(--gradWidth));
     border-radius: 5vw;
     background: linear-gradient(180deg, var(--idvpurple) 0%, var(--idvpink) 100%);
+    z-index: -1;
+}
+
+.boxGradient::before{
+    --gradWidth: 6px;
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--gradWidth)/2);
+    top: calc(-1 * var(--gradWidth)/2);
+    width: calc(100% + var(--gradWidth));
+    height: calc(100% + var(--gradWidth));
+    border-radius: calc(var(--this-border-radius) + var(--gradWidth) / 2);
+    background: linear-gradient(180deg, var(--idvpurple) 0%, var(--accent-color) 100%);
     z-index: -1;
 }
