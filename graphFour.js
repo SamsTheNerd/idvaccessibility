@@ -79,6 +79,10 @@ genChart4 = () => {
                 },
                 scales: {
                     y: {
+                        title: {
+                            display: true,
+                            text: 'all students'
+                        },
                         ticks: {
                             callback: function (value) {
                                 return value * 100 + '%';

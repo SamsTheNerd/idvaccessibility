@@ -48,7 +48,6 @@ genChart3 = (function () {
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
                 interaction: {
                     mode: 'index'
                 },
