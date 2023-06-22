@@ -248,6 +248,40 @@ p {
     height: 100%;
 }
 
+#closingText {
+    grid-row: calc(var(--emmaStart) + 29) / calc(var(--emmaStart) + 40);
+    grid-column: 2 / 8;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#conclusionYOU {
+    grid-row: calc(var(--emmaStart) + 42) / calc(var(--emmaStart) + 55);
+    grid-column: 2 / 8;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
+#closeBannerImg {
+    grid-row: calc(var(--emmaStart) + 48) / calc(var(--emmaStart) + 55);
+    grid-column: 2 / 8;
+    width: 100%;
+    position: absolute;
+    margin-top: auto;
+}
+
+#conclusionAfter {
+    grid-row: calc(var(--emmaStart) + 55) / calc(var(--emmaStart) + 65);
+    grid-column: 2 / 8;
+    width: 100%;
+    text-align: center;
+}
+
+
 .navButton {
     position: relative;
     color: white;
