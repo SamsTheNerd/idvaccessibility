@@ -15,6 +15,10 @@
     overflow-x: hidden;
     color: var(--idvdarkpurple);
     font-family: Helvetica, sans-serif;
+
+    /* just some defaults so classes don't get mad */
+    --this-border-radius: 0vw;
+    --accent-color: var(--idvpink);
 }
 
 ::-moz-selection {
@@ -40,7 +44,7 @@
     left: 0vw;
     top: 6vw;
     width: 100%;
-    height: 95vw;
+    height: 200vw;
     display: grid;
     grid-auto-flow: row;
     justify-content: space-around;
@@ -85,7 +89,12 @@ h2 {
     font-weight: bold;
 }
 
-h4 {
+h3{
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+h4{
     font-size: 2vw;
 }
 
@@ -161,6 +170,76 @@ p {
     display: grid;
     margin-top: 0;
     /* align-content: space-between; */
+}
+
+#accessibleRoutesTitle{
+    grid-row: 7 / 8;
+    grid-column: 3 / 7;
+    display: grid;
+    align-items: end;
+    height: 100%;
+    text-align: center;
+    border-bottom: solid 6px var(--idvpurple);
+    margin-top: 0;
+}
+
+#graphOneContainer{
+    grid-row: 8 / 12;
+    grid-column: 2 / 6;
+    position: relative;
+    display: grid;
+    justify-content: right;
+}
+
+#graphOneInfoBox{
+    grid-row: 8 / 11;
+    grid-column: 6 / 9;
+    width: 100%;
+    min-height: 100%;
+    height: min-content;
+    position: absolute;
+    background: white;
+    --this-border-radius: 2vw;
+    --accent-color: var(--idvpurple);
+    border-radius: 2vw;
+}
+ 
+#graphOneInfoBox p {
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+.dataViewerSubhead{
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    border-bottom: solid 2px var(--idvpurple);
+    margin-top: -1vw;
+    word-wrap: none;
+}
+
+.dataViewerData{
+    margin-top: 0.5vw;
+    width: 100%;
+    display: inline-grid; 
+    justify-content: end;
+    text-align: right;
+}
+
+.isAccessibleData{
+    font-weight: bolder;
+}
+
+.dataViewerHeader{
+    width: 80%;
+    left: 10%;
+    position: relative;
+    text-align: center;
+    height: auto;
+    padding-bottom: 1vw;
+    color: var(--idvpurple);
+    border-bottom: solid 3px var(--accent-color);
 }
 
 #adminImportance {
@@ -415,5 +494,18 @@ svg.bottomIcon {
     height: calc(100% + var(--gradWidth));
     border-radius: 5vw;
     background: linear-gradient(180deg, var(--idvpurple) 0%, var(--idvpink) 100%);
+    z-index: -1;
+}
+
+.boxGradient::before{
+    --gradWidth: 6px;
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--gradWidth)/2);
+    top: calc(-1 * var(--gradWidth)/2);
+    width: calc(100% + var(--gradWidth));
+    height: calc(100% + var(--gradWidth));
+    border-radius: calc(var(--this-border-radius) + var(--gradWidth) / 2);
+    background: linear-gradient(180deg, var(--idvpurple) 0%, var(--accent-color) 100%);
     z-index: -1;
 }
