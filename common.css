@@ -8,7 +8,7 @@
 
     --select-background-color: var(--idvgreen);
 
-    --emmaStart: 40;
+    --emmaStart: 16;
 
     --scrollPos: 0;
     --navShiftPoint: 500;
@@ -135,7 +135,7 @@ p {
 }
 
 #scrollPrompt {
-    grid-row: 4 / 4;
+    grid-row: 3 / 3;
     grid-column: 4 / 6;
     position: absolute;
     height: 100%;
@@ -148,12 +148,12 @@ p {
 }
 
 #studentNeeds {
-    grid-row: 4 / 4;
+    grid-row: 5 / 5;
     grid-column: 1 / 11;
 }
 
 #studentNeedsHeader {
-    grid-row: 7 / 7;
+    grid-row: 5 / 5;
     grid-column: 3 / 7;
     width: 100%;
     height: 100%;
@@ -165,7 +165,7 @@ p {
 }
 
 #studentNeedsText {
-    grid-row: 8 / 9;
+    grid-row: 6 / 8;
     grid-column: 2 / 8;
     width: 100%;
     height: 100%;
@@ -175,7 +175,7 @@ p {
 }
 
 #accessibleRoutesTitle{
-    grid-row: 11 / 11;
+    grid-row: 8 / 9;
     grid-column: 3 / 7;
     display: grid;
     align-items: end;
@@ -186,7 +186,7 @@ p {
 }
 
 #graphOneContainer{
-    grid-row: 12 / 16;
+    grid-row: 9 / 13;
     grid-column: 2 / 6;
     position: relative;
     display: grid;
@@ -194,7 +194,7 @@ p {
 }
 
 #graphOneInfoBox{
-    grid-row: 12 / 16;
+    grid-row: 9 / 12;
     grid-column: 6 / 9;
     width: 100%;
     min-height: 100%;
@@ -245,7 +245,7 @@ p {
 }
 
 #nearestBathroomTitle{
-    grid-row: 12 / 13;
+    grid-row: 13 / 14;
     grid-column: 3 / 7;
     display: grid;
     align-items: end;
@@ -253,6 +253,19 @@ p {
     text-align: center;
     border-bottom: solid 6px var(--idvpurple);
     margin-top: 0;
+}
+
+#graphTwoContainer{
+    grid-row: 14 / 16;
+    grid-column: 3 / 7;
+    display: grid;
+    width: 100%;
+    justify-content: start;
+}
+
+#graphTwoContainer img{
+    /* height: 100%; */
+    width: 100%;
 }
 
 #adminImportance {

@@ -14,6 +14,12 @@ var genChart1Data = () => {
                 locB: "DCC 318",
                 x: 40,
                 y: 40
+            },
+            {
+                locA: "JEC 3118",
+                locB: "DCC 318",
+                x: 210,
+                y: 420
             }
           ],
           backgroundColor: getCSSVariable("--idvgreen")
@@ -33,6 +39,18 @@ var genChart1Data = () => {
                     x: 110,
                     y: 160
                 },
+                {
+                    locA: "Sage 3303",
+                    locB: "Union 1802",
+                    x: 660,
+                    y: 710
+                },
+                {
+                    locA: "Rickets 211",
+                    locB: "Troy 112",
+                    x: 180,
+                    y: 340
+                }
             ],
             backgroundColor: getCSSVariable("--idvpink")
           },],
@@ -155,13 +173,13 @@ Y8b  d8 88   88 88   88 88 `88.    88         j88.
 
 */
 
-var bathroomData = genChart2Data();
-var chart2;
+// var bathroomData = genChart2Data();
+// var chart2;
 
-var genChart2Data = () => {
-    return 
-}
+// var genChart2Data = () => {
+//     return 
+// }
 
-var genChart2 = () => {
+// var genChart2 = () => {
 
-}
+// }
