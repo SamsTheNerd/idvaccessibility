@@ -173,7 +173,7 @@ p {
 }
 
 #accessibleRoutesTitle{
-    grid-row: 7 / 8;
+    grid-row: 11 / 11;
     grid-column: 3 / 7;
     display: grid;
     align-items: end;
@@ -184,7 +184,7 @@ p {
 }
 
 #graphOneContainer{
-    grid-row: 8 / 12;
+    grid-row: 12 / 16;
     grid-column: 2 / 6;
     position: relative;
     display: grid;
@@ -192,7 +192,7 @@ p {
 }
 
 #graphOneInfoBox{
-    grid-row: 8 / 11;
+    grid-row: 12 / 16;
     grid-column: 6 / 9;
     width: 100%;
     min-height: 100%;
@@ -478,6 +478,15 @@ svg.bottomIcon {
 .circleShare:hover svg.circleNavIcon {
     fill: var(--idvpurple);
 }
+
+#petition2Button:hover svg.bottomIcon {
+    fill: var(--idvpurple);
+}
+
+#email2Button:hover svg.bottomIcon {
+    fill: var(--idvpurple);
+}
+
 
 .purplePinkHoverStroke:hover {
     background-color: white !important;
