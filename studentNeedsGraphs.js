@@ -30,8 +30,8 @@ var genChart1Data = () => {
                 {
                     locA: "Amos Eaton 114",
                     locB: "VCC 2nd Floor",
-                    x: 100,
-                    y: 150
+                    x: 110,
+                    y: 160
                 },
             ],
             backgroundColor: getCSSVariable("--idvpink")
@@ -44,6 +44,8 @@ var chart1;
 
 var updateChart1Viewer = (locationData, accessible) => {
     document.getElementById("graphOneInfoBox").style.setProperty("--accent-color", 
+        accessible ? getCSSVariable("--idvgreen") : getCSSVariable("--idvpink"));
+    document.getElementById("graphOneInfoBox").style.setProperty("--select-background-color", 
         accessible ? getCSSVariable("--idvgreen") : getCSSVariable("--idvpink"));
     document.getElementById("graphOneInfoBox").innerHTML = `
     <h3 class="dataViewerHeader">Route Info</h3>
@@ -140,4 +142,26 @@ var genChart1 = () => {
             }
         }
     );
+}
+
+
+/*
+ .o88b. db   db  .d8b.  d8888b. d888888b      .d888b.
+d8P  Y8 88   88 d8' `8b 88  `8D `~~88~~'      VP  `8D
+8P      88ooo88 88ooo88 88oobY'    88            odD'
+8b      88~~~88 88~~~88 88`8b      88          .88'
+Y8b  d8 88   88 88   88 88 `88.    88         j88.
+ `Y88P' YP   YP YP   YP 88   YD    YP         888888D
+
+*/
+
+var bathroomData = genChart2Data();
+var chart2;
+
+var genChart2Data = () => {
+    return 
+}
+
+var genChart2 = () => {
+
 }

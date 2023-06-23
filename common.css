@@ -6,6 +6,8 @@
 
     --idvdarkpurple: #4e4665;
 
+    --select-background-color: var(--idvgreen);
+
     --emmaStart: 40;
 
     --scrollPos: 0;
@@ -23,11 +25,11 @@
 
 ::-moz-selection {
     /* Code for Firefox */
-    background: var(--idvgreen);
+    background: var(--select-background-color)
 }
 
 ::selection {
-    background: var(--idvgreen);
+    background: var(--select-background-color);
 }
 
 #navbar {
@@ -229,6 +231,17 @@ p {
     padding-bottom: 1vw;
     color: var(--idvpurple);
     border-bottom: solid 3px var(--accent-color);
+}
+
+#nearestBathroomTitle{
+    grid-row: 12 / 13;
+    grid-column: 3 / 7;
+    display: grid;
+    align-items: end;
+    height: 100%;
+    text-align: center;
+    border-bottom: solid 6px var(--idvpurple);
+    margin-top: 0;
 }
 
 #adminImportanceHeader {
