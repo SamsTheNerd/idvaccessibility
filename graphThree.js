@@ -20,6 +20,15 @@ genChart3 = (function () {
     var data1 = temp1;
     var data2 = temp2;
 
+    const footer = (tooltipItems) => {
+        let sum = 0;
+      
+        tooltipItems.forEach(function(tooltipItem) {
+          sum += tooltipItem.parsed.y;
+        });
+        return 'Sum: $' + sum;
+      };
+
     // Create the chart
     new Chart(
         document.getElementById('graphThree'),
@@ -52,6 +61,15 @@ genChart3 = (function () {
                     mode: 'index'
                 },
                 plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                let label = '  $' + context.parsed.y
+                                return label;
+                            },
+                            footer: footer,
+                        },
+                    },
                     title: {
                         display: true,
                         text: (ctx) => 'Total Profit After Investing in 24 Gender Neutral Restrooms',
